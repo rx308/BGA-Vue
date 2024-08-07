@@ -1,0 +1,67 @@
+#menu{
+
+    width: 100%;
+    height: 100%;
+    background: $blue;
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index: 1;
+    padding-top: calc(78px * var(--sw));
+    padding-bottom: calc(78px * var(--sw));
+    overflow: auto;
+    box-sizing: border-box;
+    transition: $anim;
+
+    &:not(.active){
+
+        transform: translateY(-100%);
+        touch-action: none;
+        pointer-events: none;
+        height: 0%;
+
+    }
+
+    & .list {
+
+        width: 100%;
+        gap:calc(40px * var(--sw));
+        margin-top: calc(40px * var(--sw));
+        padding-bottom: calc(40px * var(--sw));
+        border-bottom: 1px solid $light;
+
+        & a{
+
+            width: 100%;
+            color: $light;
+            font-size: calc(25px * var(--sw));
+            font-weight: bolder;
+
+        }
+
+    }
+
+    & .list-phones{
+
+        margin-top: calc(40px * var(--sw));
+        width: 100%;
+        gap:calc(20px * var(--sw));
+
+        & a{
+
+            width: 100%;
+            color: $light;
+            font-size: calc(28px * var(--sw));
+            font-weight: bolder;
+
+        }
+
+    }
+
+    @media all and (min-width: $breakpoint-mobile) {
+
+        display: none;
+
+    }
+
+}

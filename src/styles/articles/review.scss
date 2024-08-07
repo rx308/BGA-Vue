@@ -1,0 +1,257 @@
+[data-an="review"]{
+
+    padding: calc(115px * var(--sw)) 0px;
+    background-color: #F5F5F5;
+    background-image: url('/images/excellence.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & .headline-title {
+
+        width: calc(930px * var(--sw));
+        color: $dark;
+
+    }
+
+    & .slyder{
+
+        width: 100%;
+        min-height: calc(425px * var(--sw));
+        margin-top: calc(90px * var(--sw));
+        position: relative;
+
+    }
+
+    & .slyde{
+
+        width: calc(810px * var(--sw));
+        background: $light;
+        padding: calc(30px * var(--sw)) calc(30px * var(--sw)) calc(30px * var(--sw)) calc(95px * var(--sw));
+        min-height: calc(425px * var(--sw));
+        box-sizing: border-box;
+        border-radius: calc(20px * var(--sw));
+        position: absolute;
+        color: $blue-dark;
+        transition: $anim;
+
+        outline: none;
+        user-select: none;
+        cursor: grab;
+
+        &.sub-next:not(.active, .next){
+
+            opacity: 0;
+            transform: translateX(calc(200% + 60px * var(--sw)));
+            
+        }
+
+        &.sub-prev:not(.active,.prev){
+
+            opacity: 0;
+            transform: translateX(calc(-200% - 60px * var(--sw)));
+            
+        }
+
+        &.active{
+
+            opacity: 1;
+            transform: translateX(0%);
+            
+        }
+
+        &.next:not(.active,.sub-prev) {
+
+            opacity: 1;
+            transform: translateX(calc(100% + 30px * var(--sw)));
+
+        }
+
+        &.prev:not(.active,.sub-next) {
+
+            opacity: 1;
+            transform: translateX(calc(-100% - 30px * var(--sw)));
+
+        }
+
+        & .avatar{
+
+            position: absolute;
+            top:calc(30px * var(--sw));
+            left:calc(30px * var(--sw));
+            width: calc(45px * var(--sw));
+            height: calc(45px * var(--sw));
+
+        }
+
+        & .name{
+
+            width: 100%;
+
+        }
+
+        & .stars{
+
+            width:100%;
+            margin-top: calc(10px * var(--sw));
+            gap:calc(2px * var(--sw));
+
+            & img {
+
+                width: calc(12px * var(--sw));
+                height: calc(12px * var(--sw));
+
+            }
+
+
+        }
+
+        & .text{
+            
+            width: 100%;
+            margin-top: calc(30px * var(--sw));
+
+        }
+
+        & .date{
+
+            width: 100%;
+            font-style: normal;
+            font-weight: 400;
+            font-size: calc(15px * var(--sw));
+            line-height: calc(19px * var(--sw));
+            color: $dark;
+            margin-top: calc(30px * var(--sw));
+
+        }
+    
+    }
+
+    & .slyder-actions{
+
+        width: 100%;
+        margin-top: calc(38px * var(--sw));
+        gap:calc(30px * var(--sw));
+
+        & .action-btn{
+
+            width: calc(32px * var(--sw));
+            height: calc(32px * var(--sw));
+            background: none;
+            transition: $anim;
+
+            & img{
+
+                width: 100%;
+                height: 100%;
+
+            }
+
+            &.prev img{
+
+                transform: rotateZ(-180deg);
+
+            }
+
+            &:hover{
+
+                opacity: 0.4;
+                transition: $anim;
+
+            }
+
+        }
+
+        & .slyder-page{
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: calc(14.4px * var(--sw));
+            line-height: 120%;
+            color: #000000;
+
+        }
+
+    }
+
+    @media all and (max-width: $breakpoint-mobile) {
+
+        padding: calc(60px * var(--sw)) 0px;
+
+        & .headline-title {
+
+            width: 100%;
+            margin-top: calc(30px * var(--sw));
+
+        }
+
+        & .slyder{
+
+            width: 100%;
+            min-height: calc(485px * var(--sw));
+            margin-top: calc(45px * var(--sw));
+
+        }
+
+        & .slyde{
+
+            width: 100%;
+            padding: calc(20px * var(--sw)) calc(15px * var(--sw));
+            min-height: calc(485px * var(--sw));
+            border-radius: calc(20px * var(--sw));
+
+            & .avatar{
+
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: calc(45px * var(--sw));
+                height: calc(45px * var(--sw));
+
+            }
+
+            & .name{
+
+                width: 100%;
+                margin-top: calc(20px * var(--sw));
+
+            }
+
+            & .stars{
+
+                width:100%;
+                margin-top: calc(10px * var(--sw));
+                gap:calc(2px * var(--sw));
+
+                & img {
+
+                    width: calc(12px * var(--sw));
+                    height: calc(12px * var(--sw));
+
+                }
+
+
+            }
+
+            & .text{
+
+                width: 100%;
+                margin-top: calc(20px * var(--sw));
+                font-size: calc(12px * var(--sw));
+
+            }
+
+            & .date{
+
+                width: 100%;
+                font-size: calc(12px * var(--sw));
+                line-height: calc(16px * var(--sw));
+                margin-top: calc(15px * var(--sw));
+
+            }
+        
+        }
+
+    }
+
+}

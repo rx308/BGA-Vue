@@ -1,0 +1,129 @@
+[data-an="about"]{
+
+    padding: calc(115px * var(--sw)) 0px;
+    background: #F6F6F6;
+
+    & .info{
+
+        width: calc(684px * var(--sw));
+        gap:calc(40px * var(--sw));
+
+        & .title{
+
+            color: $blue-dark;
+            font-weight: bolder;
+
+        }
+
+        & .desc{
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: calc(24px * var(--sw));
+            line-height: 120%;
+            color: $dark;
+            padding-right: calc(60px * var(--sw));
+            box-sizing: border-box;
+
+        }
+
+    }
+
+    & .art{
+
+        width: calc(686px * var(--sw));
+        height: calc(520px * var(--sw));
+        border-radius: calc(20px * var(--sw));
+
+    }
+
+    & .stats{
+
+        width: 100%;
+        margin-top: calc(70px * var(--sw));
+
+        & .item{
+
+            width: calc(316px * var(--sw));
+            display: flex;
+            flex-wrap: wrap;
+            gap:calc(20px * var(--sw));
+
+        }
+
+        & .value{
+
+            color: $blue;
+
+        }
+
+        & .text{
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: calc(24px * var(--sw));
+            line-height: 120%;
+            color: $dark;
+
+        }
+
+    }
+
+    @media all and (max-width: $breakpoint-mobile) {
+
+        padding: calc(60px * var(--sw)) 0px;
+
+        & .info{
+
+            width: 100%;
+            gap:calc(40px * var(--sw));
+
+            & .desc{
+
+                font-size: calc(18px * var(--sw));
+                padding-right: 0px;
+
+            }
+
+        }
+
+        & .art{
+
+            width: 100%;
+            height: auto;
+            border-radius: calc(20px * var(--sw));
+            margin-top: calc(20px * var(--sw));
+
+        }
+
+        & .stats{
+
+            width: 100%;
+            margin-top: calc(50px * var(--sw));
+            gap:calc(40px * var(--sw));
+
+            & .item{
+
+                gap:calc(10px * var(--sw));
+
+            }
+
+            & .value {
+
+                font-size: calc(30px * var(--sw));
+
+            }
+
+            & .text{
+
+                width: 100%;
+                font-size: calc(16px * var(--sw));
+                
+
+            }
+
+        }
+
+    }
+
+}

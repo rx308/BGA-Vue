@@ -1,0 +1,174 @@
+[data-an="utp"]{
+
+    padding: calc(115px * var(--sw)) 0px;
+    position: relative;
+    z-index: 0;
+
+    &::after{
+
+        width: 100%;
+        height: calc(550px * var(--sw));
+        content:'';
+        background: url('/images/arrow-backdrop.png');
+        background-position: center bottom;
+        background-repeat: repeat-x;
+        background-size: contain;
+        position: absolute;
+        bottom:0px;
+        left: 0px;
+        z-index: -1;
+        
+
+    }
+
+    & .container{
+
+        gap:calc(40px * var(--sw));
+
+    }
+
+    & .desc{
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(24px * var(--sw));
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: $dark;
+
+    }
+
+    & .title{
+
+        font-weight: bolder;
+        color: $dark;
+        text-align: center;
+
+    }
+
+    & .teams{
+
+        gap:calc(10px * var(--sw));
+
+        & img {
+            
+            width: calc(100px * var(--sw));
+            height: calc(100px * var(--sw));
+            object-fit: cover;
+            object-position: 50% 50%;
+            border-radius: calc(5px * var(--sw));
+
+        }
+
+    }
+
+    & .edge {
+
+        width: 100%;
+        margin-top: calc(100px * var(--sw));
+
+        & p {
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: calc(22px * var(--sw));
+            line-height: 120%;
+            color: $dark;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+
+        }
+
+        & .sep {
+
+            margin-left: calc(20px * var(--sw));
+            margin-right: calc(20px * var(--sw));
+
+        }
+
+        & span{
+
+            font-size: calc(18px * var(--sw));
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+        }
+
+    }
+
+    @media all and (max-width: $breakpoint-mobile) {
+
+        padding: calc(60px * var(--sw)) 0px;
+
+        &::after{
+
+            height: calc(380px * var(--sw));
+
+
+        }
+
+        & .container{
+
+            gap:calc(30px * var(--sw));
+
+        }
+
+        & .desc{
+
+            font-size: calc(16px * var(--sw));
+
+            & br{
+
+                display: none;
+
+            }
+
+        }
+
+        & .teams{
+
+            gap:calc(5px * var(--sw));
+
+            & img {
+
+                width: calc(50px * var(--sw));
+                height: calc(50px * var(--sw));
+                border-radius: calc(4px * var(--sw));
+
+            }
+
+        }
+
+        & .edge {
+
+            width: 100%;
+            margin-top: calc(40px * var(--sw));
+            gap:calc(10px * var(--sw));
+
+            & p {
+
+                font-size: calc(18px * var(--sw));
+
+            }
+
+            & .sep {
+
+                margin-left: calc(10px * var(--sw));
+                margin-right: calc(10px * var(--sw));
+
+            }
+
+            & span{
+
+                font-size: calc(16px * var(--sw));
+
+            }
+
+        }
+
+    }
+
+}

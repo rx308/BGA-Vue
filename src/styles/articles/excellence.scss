@@ -1,0 +1,270 @@
+[data-an="excellence"]{
+
+    padding: calc(115px * var(--sw)) 0px;
+    background-color: #F5F5F5;
+    background-image: url('/images/excellence.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & .container{
+
+        gap:calc(30px * var(--sw));
+
+    }
+
+    & .headline{
+
+        width: 100%;   
+
+    }
+
+    & .info { 
+
+        width: calc(808px * var(--sw));
+        gap: calc(40px * var(--sw));
+
+        & .title{
+
+            width: 100%;
+            color: $blue-dark;
+
+        }
+        
+
+        & .text{
+
+            width: calc(642px * var(--sw));
+            font-style: normal;
+            font-weight: 400;
+            font-size: calc(24px * var(--sw));
+            line-height: 120%;
+            color: $dark;
+
+        }
+
+    }
+
+    & .cards{
+
+        width: 100%;
+
+        & .card{
+
+            min-height: calc(465px * var(--sw));
+
+        }
+
+    }
+
+    & .card {
+
+        width: calc(450px * var(--sw));
+        border-radius: calc(20px * var(--sw));
+        background: $light;
+        padding: calc(40px * var(--sw)) calc(30px * var(--sw));
+        gap:calc(20px * var(--sw));
+        position: relative;
+        box-sizing: border-box;
+        color: $dark;
+
+        &.card-blue{
+
+            color: $light;
+            background: $blue;
+
+        }
+
+        & .title{
+
+            color: inherit;
+
+        }
+
+        & .text{
+
+            color: inherit;
+
+        }
+
+        & .teams{
+
+            width: 100%;
+            margin-top: calc(55px * var(--sw));
+            
+
+            & .team{
+
+                width: calc(80px * var(--sw));
+                height: calc(80px * var(--sw));
+                border-radius: 100%;
+                box-sizing: border-box;
+                border: 1px solid #CCCCCC;
+                margin: 0px calc(-10px * var(--sw));
+                object-fit: cover;
+                object-position: 50% 50%;
+                background: $light;
+
+                &.team-count{
+
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: center;
+                    color: #000000;
+
+                }
+
+            }
+
+        }
+
+        & .hash{
+
+            width: 100%;
+            gap:calc(10px * var(--sw));
+            padding-right: calc(40px * var(--sw));
+
+            & p{
+
+                box-sizing: border-box;
+                padding: calc(12px * var(--sw)) calc(15px * var(--sw));
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: calc(20px * var(--sw));
+
+                font-style: normal;
+                font-weight: 400;
+                font-size: calc(15px * var(--sw));
+                line-height: 120%;
+                color: $dark;
+
+            }
+
+        }
+
+        & .art--1{
+
+            position: absolute;
+            width: 100%;
+            height: calc(274px * var(--sw));
+            left: 0px;
+            bottom: calc(52px * var(--sw));
+            object-position: left bottom;
+            object-fit: contain;
+
+        }
+
+        & .art--2{
+
+            position: absolute;
+            width: calc(374px * var(--sw));
+            height: calc(175px * var(--sw));
+            left: calc(130px * var(--sw));
+            bottom: calc(45px * var(--sw));
+            object-position: left bottom;
+            object-fit: contain;
+
+        }
+
+    }
+
+    @media all and (max-width: $breakpoint-mobile) {
+
+        padding: calc(60px * var(--sw)) 0px;
+
+        & .container{
+
+            gap:calc(20px * var(--sw));
+
+        }
+
+        & .info { 
+
+            width: 100%;
+            gap: calc(20px * var(--sw));
+
+            & .text{
+
+                width: 100%;
+                font-size: calc(14px * var(--sw));
+
+            }
+
+        }
+
+        & .cards{
+
+            & .card{
+
+                min-height: auto;
+
+            }
+
+        }
+
+        & .card {
+
+            width: 100%;
+            border-radius: calc(10px * var(--sw));
+            padding: calc(20px * var(--sw)) calc(15px * var(--sw));
+            gap:calc(20px * var(--sw));
+            margin-top: calc(40px * var(--sw));
+ 
+            & .teams{
+
+                width: 100%;
+                margin-top: calc(20px * var(--sw));
+
+
+                & .team{
+
+                    width: calc(50px * var(--sw));
+                    height: calc(50px * var(--sw));
+                    margin: 0px calc(-10px * var(--sw));
+
+                }
+
+            }
+
+            & .hash{
+
+                width: 100%;
+                gap:calc(10px * var(--sw));
+                padding-right: calc(40px * var(--sw));
+
+                & p{
+
+                    padding: calc(6px * var(--sw)) calc(10px * var(--sw));
+                    border-radius: calc(10px * var(--sw));
+                    font-size: calc(12px * var(--sw));
+
+                }
+
+            }
+
+            & .art--1{
+
+                position: relative;
+                width: calc(100% + 32px * var(--sw));
+                height: auto;
+                left: calc(-16px * var(--sw));
+                bottom: calc(0px * var(--sw));
+
+            }
+
+            & .art--2{
+
+                position: relative;
+                width: 100%;
+                height: auto;
+                left: 0px;
+                bottom: calc(0px * var(--sw));
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,102 @@
+header{
+
+    width: 100%;
+    position: sticky;
+    top:0px;
+    left:0px;
+    background: $blue;
+    padding: calc(15px * var(--sw)) 0px;
+    z-index: 2;
+
+    & .list{
+
+        gap:calc(30px * var(--sw));
+        
+        & a{
+
+            font-style: normal;
+            font-weight: 300;
+            font-size: calc(16px * var(--sw));
+            line-height: calc(19px * var(--sw));
+            letter-spacing: 0.03em;
+            color: $light;
+            transition: $anim;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            text-underline-offset: calc(5px * var(--sw));
+            text-decoration-thickness: calc(2px * var(--sw));
+
+            &:hover{
+
+                text-decoration-color: $light;
+                transition: $anim;
+    
+            }
+
+        }
+
+    }
+
+    & .list-phones{
+
+        gap:calc(30px * var(--sw));
+
+    }
+
+    & .phone{
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: calc(18px * var(--sw));
+        line-height: 140%;
+        color: $light;
+        transition: $anim;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-underline-offset: calc(5px * var(--sw));
+        text-decoration-thickness: calc(2px * var(--sw));
+
+        &:hover{
+
+            text-decoration-color: $light;
+            transition: $anim;
+
+        }
+
+    }
+
+    @media all and (min-width: $breakpoint-mobile) {
+        
+        & .mobile{
+
+            display: none;
+
+        }
+
+    }
+
+    @media all and (max-width: $breakpoint-mobile) {
+        
+        & .desktop{
+
+            display: none;
+
+        }
+
+        & .logo{
+
+            width: calc(124px * var(--sw));
+            height: calc(48px * var(--sw));
+
+        }
+
+        & .btn-menu{
+
+            width: calc(32px * var(--sw));
+            height: calc(32px * var(--sw));
+
+        }
+
+    }
+
+}

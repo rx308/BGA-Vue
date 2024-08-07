@@ -1,0 +1,106 @@
+[data-an="contact"]{
+
+    padding: calc(115px * var(--sw)) 0px;
+    background: $light;
+
+    & .headline{
+
+        width: calc(570px * var(--sw));
+        gap: calc(40px * var(--sw));
+        color: $blue-dark;
+
+    }
+
+    & .form{
+
+        width: calc(690px * var(--sw));
+        gap:calc(20px * var(--sw));
+
+        & input{
+
+            width: 100%;
+            height: calc(54px * var(--sw));
+            box-sizing: border-box;
+            padding: 0px calc(20px * var(--sw));
+            background: #F5F5F5;
+            border: 1px solid #D9D9D9;
+            border-radius: calc(10px * var(--sw));
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: calc(15px * var(--sw));
+            line-height: calc(19px * var(--sw));
+            transition: $anim;
+
+        }
+
+        & textarea {
+
+            width: 100%;
+            height: calc(108px * var(--sw));
+            box-sizing: border-box;
+            padding: calc(20px * var(--sw));
+            background: #F5F5F5;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #D9D9D9;
+            border-radius: calc(10px * var(--sw));
+            resize: none;
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: calc(15px * var(--sw));
+            line-height: calc(19px * var(--sw));
+            transition: $anim;
+
+        }
+
+        & input:focus, & textarea:focus{
+
+            border-color: $blue;
+            transition: $anim;
+
+        }
+
+        & input.err, & textarea.err{
+
+            border-color: #f06060;
+            transition: $anim;
+
+        }
+
+        & .input-duo{
+
+            width: calc(50% - 10px * var(--sw));
+
+        }
+
+    }
+
+    @media all and (max-width: $breakpoint-mobile) {
+
+        padding: calc(60px * var(--sw)) 0px;
+
+        & .headline{
+
+            gap: calc(30px * var(--sw));
+
+        }
+
+        & .form{
+
+            width: 100%;
+            gap:calc(15px * var(--sw));
+            margin-top: calc(20px * var(--sw));
+
+            & .input-duo{
+
+                width: 100%;
+
+            }
+
+        }
+
+    }
+
+}

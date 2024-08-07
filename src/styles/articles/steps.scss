@@ -1,0 +1,198 @@
+[data-an="steps"]{
+
+    padding: calc(115px * var(--sw)) 0px;
+    background: $light;
+    box-sizing: border-box;
+
+    & .headline{
+
+        width: calc(570px * var(--sw));
+        min-height: calc(100vh - 230px * var(--sw));
+        position: sticky;
+        top:calc(115px * var(--sw));
+        color: $dark;
+
+    }
+
+    & .up, & .down{
+
+        width: 100%;
+
+    }
+
+    & .up{
+
+        gap:calc(40px * var(--sw));
+
+    }
+
+    & .down{
+
+        gap:calc(30px * var(--sw));
+
+    }
+
+    & .desc{
+
+        width: 100%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(24px * var(--sw));
+        line-height: 120%;
+
+    }
+
+    & .like{
+
+        width: calc(50px * var(--sw));
+        height: calc(50px * var(--sw));
+
+    }
+
+    & .line{
+
+        width: calc(1px * var(--sw));
+        height: 100%;
+        background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 8.12%), #D9D9D9;
+
+        position: absolute;
+        left:calc(-136px * var(--sw));
+        top:calc(12px * var(--sw));
+
+        & .line-thumb{
+
+            width: 100%;
+            position: absolute;
+            top:0px;
+            left:0px;
+            background: $blue;
+
+        }
+
+
+    }
+
+    & .list{
+
+        width: calc(564px * var(--sw));
+        gap:calc(90px * var(--sw));
+
+        & .item{
+
+            width: 100%;
+            display: inherit;
+            flex-wrap: wrap;
+            gap:calc(20px * var(--sw));
+            position: relative;
+
+            &::after{
+
+                content:'';
+                position: absolute;
+                width: calc(12px * var(--sw));
+                height: calc(12px * var(--sw));
+                left: calc(-141.5px * var(--sw));
+                top: calc(12px * var(--sw));
+                background: $grey-border;
+                border-radius: 100%;
+                transition: $anim;
+                
+            }
+
+            &.active::after{
+
+                background: $blue;
+
+            }
+
+            & .title, & .text{
+
+                width:100%;
+                color: $dark;
+                
+
+            }
+
+
+        }
+        
+
+    }
+
+    @media all and (max-width: $breakpoint-mobile) {
+
+        padding: calc(60px * var(--sw)) 0px;
+
+        & .headline{
+
+            width: 100%;
+            min-height: auto;
+            position: initial;
+            top: initial;
+
+        }
+
+        & .up{
+
+            gap:calc(30px * var(--sw));
+
+        }
+
+        & .down{
+
+            gap:calc(15px * var(--sw));
+            margin-top: calc(30px * var(--sw));
+            flex-wrap: nowrap;
+
+        }
+
+        & .desc{
+
+            font-size: calc(16px * var(--sw));
+
+        }
+
+        & .like{
+
+            width: calc(40px * var(--sw));
+            height: calc(40px * var(--sw));
+
+        }
+
+        & .line{
+
+            width: calc(1px * var(--sw));
+            left:0px;
+            top:calc(12px * var(--sw));
+
+
+        }
+
+        & .list{
+
+            width: 100%;
+            gap:calc(45px * var(--sw));
+            margin-top: calc(40px * var(--sw));
+            padding-left: calc(16px * var(--sw));
+
+            & .item{
+
+                width: 100%;
+                gap:calc(15px * var(--sw));
+
+                &::after{
+
+                    left: calc(-21.5px * var(--sw));
+                    top: calc(12px * var(--sw));
+
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+}

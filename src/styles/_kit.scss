@@ -1,0 +1,236 @@
+$breakpoint-mobile: 996px;
+
+$anim: all 0.4s;
+
+
+$grey-small: #AAB1BD;
+$grey-input: #F5F5F5;
+$grey-border: #D9D9D9;
+
+$blue: #2151F5;
+$blue-dark: #172337;
+$blue-light: #5DC1EF;
+
+$dark: #292929;
+$light: #ffffff;
+
+.relative{
+
+    position: relative;
+
+}
+
+.h2{
+
+    font-family: "InterTight";
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(60px * var(--sw));
+    line-height: calc(73px * var(--sw));
+
+}
+
+.h3{
+ 
+    font-family: "InterTight";
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(40px * var(--sw));
+    line-height: 120%;
+
+    
+    
+}
+
+.h4{
+ 
+    font-family: "InterTight";
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(35px * var(--sw));
+    line-height: 120%;
+    
+}
+
+.h5{
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(30px * var(--sw));
+    line-height: 120%;
+
+}
+
+.text18 {
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(18px * var(--sw));
+    line-height: 140%;
+
+}
+
+.text15{
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(15px * var(--sw));
+    line-height: 120%;
+
+
+}
+
+.bold {
+
+    font-weight: bolder;
+
+}
+
+.gap-parent {
+
+    gap: inherit;
+
+}
+
+.btn{
+
+    padding: 0px calc(30px * var(--sw));
+    height: calc(70px * var(--sw));
+    border-radius: calc(35px * var(--sw));
+    background: $blue;
+    color: $light;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(18px * var(--sw));
+    line-height: 120%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: calc(56px * var(--sw));
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    transition: $anim;
+
+    & img{
+
+        width: calc(32px * var(--sw));
+        height: calc(32px * var(--sw));
+        margin-left: calc(-10px * var(--sw));
+        margin-right: calc(-10px * var(--sw));
+        transition: $anim;
+        
+    }
+
+    &:hover{
+
+        border-color: $dark;
+        background: transparent;
+        color: $dark;
+        transition: $anim;
+
+        & img{
+
+            filter: invert(1);
+            transition: $anim;
+
+        }
+
+    }
+
+}
+
+.label-page{
+
+    box-sizing: border-box;
+    padding: calc(12px * var(--sw)) calc(15px * var(--sw));
+    border: 1px solid rgba(170, 177, 189, 0.6);
+    border-radius: calc(20px * var(--sw));
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: calc(15px * var(--sw));
+    line-height: 80%;
+    color: $blue-dark;
+
+
+}
+
+
+@media all and (max-width: $breakpoint-mobile) {
+
+    .h2{
+
+        font-size: calc(20px * var(--sw));
+        line-height: calc(24px * var(--sw));
+    
+    }
+    
+    .h3{
+     
+        font-size: calc(18px * var(--sw));
+        line-height: 120%;
+    
+        
+        
+    }
+    
+    .h4{
+     
+        font-size: calc(16px * var(--sw));
+        line-height: 120%;
+        
+    }
+    
+    .h5{
+    
+        font-size: calc(15px * var(--sw));
+        line-height: 120%;
+    
+    }
+    
+    .text18 {
+    
+        font-size: calc(14px * var(--sw));
+        line-height: 140%;
+    
+    }
+    
+    .text15{
+    
+        font-size: calc(12px * var(--sw));
+        line-height: 120%;
+    
+    
+    }
+    
+    .btn{
+    
+        padding: 0px calc(20px * var(--sw));
+        height: calc(58px * var(--sw));
+        border-radius: calc(30px * var(--sw));
+        font-size: calc(14px * var(--sw));
+        line-height: 120%;
+        gap: calc(48px * var(--sw));
+    
+        & img{
+    
+            width: calc(24px * var(--sw));
+            height: calc(24px * var(--sw));
+            margin-left: calc(-8px * var(--sw));
+            margin-right: calc(-8px * var(--sw));
+            
+        }
+    
+    }
+    
+    .label-page{
+    
+        padding: calc(8px * var(--sw)) calc(12px * var(--sw));
+        border-radius: calc(16px * var(--sw));
+        font-size: calc(12px * var(--sw));
+    
+    }
+
+}

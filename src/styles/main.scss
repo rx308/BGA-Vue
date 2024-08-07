@@ -1,0 +1,151 @@
+@import "./_fonts.scss";
+
+@import "./_kit.scss";
+
+@import "./modules/flex.scss";
+@import "./modules/grid.scss";
+
+html{
+
+    width: 100vw;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-padding: calc(180px * var(--sw));
+    scrollbar-width: thin;
+    scroll-snap-align: start;
+
+    @media (max-width: $breakpoint-mobile) {
+
+        scroll-padding: calc(90px * var(--sw));
+
+    }
+
+    &.no-scroll{
+
+        overflow: hidden;
+    
+    }
+
+}
+
+body{
+
+    width: 100%;
+    height: 100dvh;
+
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+
+    box-sizing: border-box;
+
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+
+    overflow: auto;
+
+    outline: none;
+
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+
+    background: #fff;
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &.no-scroll{
+
+        overflow: hidden;
+    
+    }
+
+    &:not(.loaded) *,
+    &.resize *{
+
+        transition: none !important;
+
+    }
+
+}
+
+input,textarea,select,
+h1,h2,h3,h4,h5,h6,
+p,strong,a{
+
+    font-family: 'Onset', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: none;
+
+}
+
+a,button{
+
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+
+}
+
+ul{
+
+    list-style: none;
+
+}
+
+input[type=number]{
+
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0; 
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button { 
+          -webkit-appearance: none; 
+          margin: 0; 
+    }
+
+}
+
+#app{
+
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+
+    scroll-padding: calc(160px * var(--sw));
+    scrollbar-width: thin;
+    scroll-snap-align: start;
+
+    @media (max-width: $breakpoint-mobile) {
+
+        scroll-padding: calc(80px * var(--sw));
+
+    }
+
+}
+
+@import './components/logo.scss';
+
+@import './layout/header.scss';
+@import './layout/footer.scss';
+@import './layout/menu.scss';
+
+@import './articles/utp.scss';
+@import './articles/about.scss';
+@import './articles/service.scss';
+@import './articles/excellence.scss';
+@import './articles/steps.scss';
+@import './articles/review.scss';
+@import './articles/contact.scss';

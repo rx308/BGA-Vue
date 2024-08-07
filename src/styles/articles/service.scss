@@ -1,0 +1,315 @@
+[data-an="service"]{
+
+    padding: calc(115px * var(--sw)) 0px;
+    background: $dark;
+
+    & .label-page{
+
+        border-color: rgba($grey-small,0.2);
+        color: $light;
+
+    }
+
+    & .headline-title {
+
+        width: calc(930px * var(--sw));
+        color: $light;
+
+    }
+
+    & .list{
+
+        width: 100%;
+        margin-top: calc(90px * var(--sw));
+
+    }
+
+    & .list-item{
+        
+        width: 100%;
+        padding: calc(50px * var(--sw)) 0px;
+        border-bottom: 1px solid rgba(#D9D9D9,0.1);
+
+        & .number{
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: calc(13px * var(--sw));
+            line-height: 80%;
+            color: $grey-small;
+
+        }
+
+        & .title {
+
+            color: $light;
+            
+        }
+
+        & .text {
+
+            color: $grey-small;
+            width: 100%;
+
+            
+        }
+
+        & .link {
+
+            gap:calc(4px * var(--sw));
+            color: $light;
+            font-weight: bolder;
+
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            text-underline-offset: calc(5px * var(--sw));
+            text-decoration-thickness: calc(2px * var(--sw));
+            transition: $anim;
+
+            &:hover{
+
+                text-decoration-color: $light;
+                transition: $anim;
+
+            }
+
+            & img{
+
+                width: calc(5px * var(--sw));
+                height: calc(8px * var(--sw));
+
+            }
+
+        }
+
+        & .image {
+
+            width: calc(200px * var(--sw));
+            height: calc(200px * var(--sw));
+            position: absolute;
+            right: calc(-130px * var(--sw));
+            top: calc(-70px * var(--sw));
+            border-radius: calc(20px * var(--sw));
+            transition: $anim;
+            transform: rotateZ(0deg) translateY(20%) scale(0);
+            opacity: 0;
+            pointer-events: none;
+            touch-action: none;
+
+        }
+
+        &:hover {
+
+            & .image {
+
+                transform: rotateZ(-4deg);
+                opacity: 1;
+                transition: $anim;
+
+            }
+
+        }
+        
+    }
+
+    & .item--title{
+
+        width: calc(528px * var(--sw));
+        position: relative;
+        gap:calc(10px * var(--sw));
+
+    }
+
+    & .item--content{
+
+        width: calc(688px * var(--sw));
+        gap:calc(40px * var(--sw));
+
+    }
+
+    & .box{
+
+        width: 100%;
+        margin-top: calc(90px * var(--sw));
+        background: $light;
+        padding: calc(60px * var(--sw)) calc(80px * var(--sw));
+        background: radial-gradient(31.74% 266.04% at 70.74% 61.4%, rgba(147, 151, 155, 0.2) 0%, rgba(201, 201, 201, 0) 100%), #F5F5F5;
+        border-radius: calc(20px * var(--sw));
+        position: relative;
+        box-sizing: border-box;
+
+        & .info{
+
+            width: calc(600px * var(--sw));
+            gap: calc(40px * var(--sw));
+
+            & .title{
+
+                width: 100%;
+                font-style: normal;
+                font-weight: 500;
+                letter-spacing: 0.05em;
+                color: $dark;
+
+                & span{
+
+                    color: $blue;
+
+                }
+
+            }
+
+            & .text{
+
+                max-width: calc(520px * var(--sw));
+                color: $dark;
+
+            }
+
+            & .link {
+
+                gap:calc(4px * var(--sw));
+                color: $light;
+                font-weight: bolder;
+                color:$dark;
+
+                text-decoration: underline;
+                text-decoration-color: transparent;
+                text-underline-offset: calc(5px * var(--sw));
+                text-decoration-thickness: calc(2px * var(--sw));
+                transition: $anim;
+
+                &:hover{
+
+                    text-decoration-color: $dark;
+                    transition: $anim;
+
+                }
+    
+                & img{
+    
+                    width: calc(5px * var(--sw));
+                    height: calc(8px * var(--sw));
+    
+                }
+    
+            }
+
+        }
+
+        & .art{
+
+            position: absolute;
+            right: calc(30px * var(--sw));
+            bottom: 0px;
+            width: calc(660px * var(--sw));
+            height: calc(525px * var(--sw));
+
+        }
+
+    }
+
+    @media all and (max-width: $breakpoint-mobile) {
+
+        padding: calc(60px * var(--sw)) 0px;
+
+        & .headline-title {
+
+            width: 100%;
+            margin-top: calc(20px * var(--sw));
+
+        }
+
+        & .list{
+
+            width: 100%;
+            margin-top: calc(40px * var(--sw));
+
+        }
+
+        & .list-item{
+
+            padding: calc(40px * var(--sw)) 0px;
+
+            & .number{
+
+                font-size: calc(12px * var(--sw));
+
+            }
+
+            & .image {
+
+                width: calc(80px * var(--sw));
+                height: calc(80px * var(--sw));
+                position: absolute;
+                right: calc(-20px * var(--sw));
+                top: calc(-70px * var(--sw));
+                border-radius: calc(10px * var(--sw));
+                transition: $anim;
+                transform: rotateZ(-4deg);
+                opacity: 1;
+                pointer-events: none;
+                touch-action: none;
+
+            }
+
+        }
+
+        & .item--title{
+
+            width: 100%;
+            position: relative;
+            gap:calc(10px * var(--sw));
+
+        }
+
+        & .item--content{
+
+            width: 100%;
+            gap:calc(20px * var(--sw));
+            margin-top: calc(20px * var(--sw));
+
+            & .text{
+
+                font-size: calc(14px * var(--sw));
+
+            }
+
+        }
+
+        & .box{
+
+            width: 100%;
+            margin-top: calc(60px * var(--sw));
+            background: $light;
+            padding: calc(30px * var(--sw)) calc(15px * var(--sw));
+            border-radius: calc(10px * var(--sw));
+
+            & .info{
+
+                width: 100%;
+                gap: calc(30px * var(--sw));
+
+                & .text{
+
+                    max-width: 100%;
+
+                }
+
+            }
+
+            & .art{
+
+                position: relative;
+                right: calc(-15px * var(--sw));
+                bottom: calc(-30px * var(--sw));
+                width: 100%;
+                height: auto;
+
+            }
+
+        }
+
+    }
+
+}
